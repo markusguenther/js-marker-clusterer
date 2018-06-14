@@ -1082,10 +1082,10 @@ ClusterIcon.prototype.onAdd = function() {
       that.triggerClusterClick(event);
     }
   });
-  google.maps.event.addDomListener(this.div_, 'mousedown', function() {
+  google.maps.event.addDomListener(this.map_, 'dragend', function() {
     isDragging = false;
   });
-  google.maps.event.addDomListener(this.div_, 'mousemove', function() {
+  google.maps.event.addDomListener(this.map_, 'dragstart', function() {
     isDragging = true;
   });
 };
